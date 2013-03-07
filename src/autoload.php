@@ -7,7 +7,7 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
-                'classe' => '/Classe.php'
+                'bankaccount\\model\\bankaccount' => '/model/BankAccount.php'
             );
         }
         $cn = strtolower($class);

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1362669173">
-  <project timestamp="1362669173">
-    <file name="C:\CentralIT\Ambiente\PHP\workspace\bankaccount\src/Classe.php">
-      <class name="Classe" namespace="global">
-        <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
-      </class>
-      <line num="6" type="stmt" count="0"/>
-      <metrics loc="16" ncloc="5" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="1" coveredelements="0"/>
-    </file>
-    <metrics files="1" loc="16" ncloc="5" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="1" coveredelements="0"/>
+<coverage generated="1362686011">
+  <project timestamp="1362686011">
+    <package name="bankaccount\model">
+      <file name="C:\CentralIT\Ambiente\PHP\workspace\bankaccount\src\model/BankAccount.php">
+        <class name="BankAccount" namespace="bankaccount\model">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="7" type="method" name="add" crap="1" count="1"/>
+        <line num="8" type="stmt" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <metrics loc="13" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <metrics files="1" loc="13" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
   </project>
 </coverage>
