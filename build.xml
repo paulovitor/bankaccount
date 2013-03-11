@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="BankAccount" default="build">
-    <target name="build" depends="prepare,lint,phpunit"/>
+    <target name="build" depends="prepare,lint,phpunit,phpdoc,phploc,pdepend"/>
     <!--<target name="build" depends="phpab"/>-->
     
     <target name="clean" description="Cleanup build artifacts">
@@ -44,6 +44,34 @@
     
     <target name="phpunit" description="Run unit tests with PHPUnit">
         <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\phpunit.bat" failonerror="true"/>
+    </target>
+    
+    <target name="phpdoc"
+            description="Generate API documentation using PHPDocumentor">
+        <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\phpdoc.bat">
+            <arg value="--directory" />
+            <arg path="${basedir}/src" />
+            <arg value="--target" />
+            <arg path="${basedir}/build/api" />
+        </exec>
+    </target>
+    
+    <target name="phploc" description="Measure project size using PHPLOC">
+        <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\phploc.bat">
+            <arg value="--log-csv" />
+            <arg value="${basedir}/build/logs/phploc.csv" />
+            <arg path="${basedir}/src" />
+        </exec>
+    </target>
+    
+    <target name="pdepend"
+            description="Calculate software metrics using PHP_Depend">
+        <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\pdepend.bat">
+            <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
+            <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
+            <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
+            <arg path="${basedir}/src" />
+        </exec>
     </target>
 
 </project>
