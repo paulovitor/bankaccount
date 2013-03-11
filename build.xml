@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="BankAccount" default="build">
-    <target name="build" depends="prepare,lint,phpunit,phpdoc,phploc,pdepend"/>
+    <target name="build" depends="prepare,lint,phpunit,phpdoc,phploc,pdepend,phpcpd"/>
     <!--<target name="build" depends="phpab"/>-->
     
     <target name="clean" description="Cleanup build artifacts">
@@ -70,6 +70,14 @@
             <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
             <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
             <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
+            <arg path="${basedir}/src" />
+        </exec>
+    </target>
+    
+    <target name="phpcpd" description="Find duplicate code using PHPCPD">
+        <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\phpcpd.bat">
+            <arg value="--log-pmd" />
+            <arg value="${basedir}/build/logs/pmd-cpd.xml" />
             <arg path="${basedir}/src" />
         </exec>
     </target>

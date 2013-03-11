@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1363005990">
-  <project timestamp="1363005990">
+<coverage generated="1363020728">
+  <project timestamp="1363020728">
     <package name="bankaccount\model">
       <file name="C:\CentralIT\Ambiente\PHP\workspace\bankaccount\src\model/BankAccount.php">
         <class name="BankAccount" namespace="bankaccount\model">
