@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="BankAccount" tests="1" assertions="1" failures="0" errors="0" time="0.028059">
-    <testsuite name="BankAccountTest" file="C:\CentralIT\Ambiente\PHP\workspace\bankaccount\tests\unit\model\BankAccountTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.028059">
-      <testcase name="testAdd" class="BankAccountTest" file="C:\CentralIT\Ambiente\PHP\workspace\bankaccount\tests\unit\model\BankAccountTest.php" line="7" assertions="1" time="0.028059"/>
-    </testsuite>
-  </testsuite>
-</testsuites>

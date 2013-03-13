@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="BankAccount" default="build">
-    <target name="build" depends="prepare,lint,phpunit,phpdoc,phploc,pdepend,phpcpd"/>
+    <target name="build" depends="prepare,lint,phpunit,phpdoc,phploc,pdepend,phpcpd,phpcs"/>
     <!--<target name="build" depends="phpab"/>-->
     
     <target name="clean" description="Cleanup build artifacts">
@@ -78,6 +78,17 @@
         <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\phpcpd.bat">
             <arg value="--log-pmd" />
             <arg value="${basedir}/build/logs/pmd-cpd.xml" />
+            <arg path="${basedir}/src" />
+        </exec>
+    </target>
+    
+    <target name="phpcs"
+            description="Find coding standard violations using PHP_CodeSniffer">
+        <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\phpcs.bat">
+            <arg value="--report=checkstyle" />
+            <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
+            <arg value="--standard=${basedir}/build/phpcs.xml" />
+            <arg value="--ignore=autoload.php" />
             <arg path="${basedir}/src" />
         </exec>
     </target>
