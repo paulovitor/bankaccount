@@ -95,7 +95,7 @@
     
     <target name="phpmd"
             description="Perform project mess detection using PHPMD">
-        <exec executable="phpmd">
+        <exec executable="C:\CentralIT\Ambiente\PHP\ServidoDeAplicacao\xampp\php\phpmd.bat">
             <arg path="${basedir}/src" />
             <arg value="xml" />
             <arg value="${basedir}/build/phpmd.xml" />
